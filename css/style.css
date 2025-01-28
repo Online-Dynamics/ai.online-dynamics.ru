@@ -382,3 +382,32 @@ h1 {
 	line-height: 1.2;
 	margin-bottom: 15px;
 }
+.toast-container {
+	z-index: 1070;
+	margin-top: 1rem;
+}
+
+@keyframes toastBlink {
+	0% { transform: translateY(0) scale(1); }
+	25% { transform: translateY(-5px) scale(1.02); }
+	50% { transform: translateY(0) scale(1); }
+	75% { transform: translateY(-3px) scale(1.01); }
+	100% { transform: translateY(0) scale(1); }
+}
+
+.toast {
+	opacity: 0.95;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	min-width: 300px;
+	animation: toastBlink 1s ease-in-out;
+}
+.toast:hover {
+	opacity: 1;
+}
+
+.toast-body {
+	font-weight: 500;
+	padding: 12px 24px;
+	text-align: center;
+}

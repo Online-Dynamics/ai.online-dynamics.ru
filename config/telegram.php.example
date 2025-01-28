@@ -1,0 +1,5 @@
+<?php
+return [
+    'bot_token' => 'PLACE_YOUR_BOT_TOKEN_HERE',
+    'chat_id' => 'PLACE_YOUR_CHAT_ID_HERE'
+];
