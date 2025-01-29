@@ -11,6 +11,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100;200;300;400;500;600;700&family=Unbounded:wght@200;300;400;500;600&display=swap');
 
+html,
+body {
+	overflow-x: hidden;
+	width: 100%;
+	position: relative;
+}
+
 /* Body */
 body {
 	font-family: 'Onest', sans-serif;
