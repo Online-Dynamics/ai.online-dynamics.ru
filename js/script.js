@@ -1,17 +1,3 @@
-/*
-Template Name: Aix | AI Business & Agency Website Template
-Author: Pillarix
-Author URI: https://wrapbootstrap.com/user/pillarix
-Version: 1.0
-*/
-/*
--- Page Loading
--- Count Down Date
--- Back To Top
--- AOS Animation 
--- Quantity Button
-*/
-
 (function($) {
     "use strict";
 
