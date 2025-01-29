@@ -108,15 +108,37 @@ a:hover {
 	background-size: cover;
 	margin-bottom: -10rem;
 }
+
+.box {
+	transition: all 0.3s ease;
+}
+
 .box:hover {
 	background-color: #1363c6;
 	border-color: #1363c6 !important;
 	color: #fff;
-	transition: ease .5s;
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(19, 99, 198, 0.2);
+	transition: all 0.3s ease;
 }
+
 .box:hover i {
 	color: #fff !important;
 }
+
+.box.active {
+	background-color: #1363c6;
+		border-color: #1363c6 !important;
+		color: #fff;
+		transform: translateY(-10px);
+		box-shadow: 0 15px 30px rgba(19, 99, 198, 0.2);
+		transition: all 0.3s ease;
+}
+
+.box.active i {
+	color: #fff !important;
+}
+
 .design:hover .overlay {
 	opacity: 0.9 !important;
 	transition: ease .5s;

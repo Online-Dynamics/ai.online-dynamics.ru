@@ -117,3 +117,25 @@ Version: 1.0
 
 
 })(window.jQuery);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceBoxes = document.querySelectorAll('.box');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
+        });
+    }, observerOptions);
+    
+    serviceBoxes.forEach(box => observer.observe(box));
+});
