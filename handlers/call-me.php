@@ -7,7 +7,8 @@ define('TELEGRAM_CHAT_ID', $config['chat_id']);
 
 
 // Get and validate phone number
-$phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+$data = json_decode(file_get_contents("php://input"), true);
+$phone = $data['phone'] ?? '';
 
 // Basic validation
 if (empty($phone)) {

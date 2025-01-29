@@ -7,10 +7,12 @@ define('TELEGRAM_BOT_TOKEN', $config['bot_token']);
 define('TELEGRAM_CHAT_ID', $config['chat_id']);
 
 // Get and validate inputs
-$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
-$contact = filter_input(INPUT_POST, 'contact', FILTER_SANITIZE_STRING);
-$message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
-$botCheck = filter_input(INPUT_POST, 'botCheck', FILTER_SANITIZE_NUMBER_INT);
+$data = json_decode(file_get_contents("php://input"), true);
+$phone = $data['phone'] ?? '';
+$name = $data['name'] ?? '';
+$contact = $data['contact'] ?? '';
+$message = $data['message'] ?? '';
+$botCheck = $data['botCheck'] ?? '';
 
 // Validation
 if (empty($name) || empty($contact) || empty($message)) {
