@@ -114,6 +114,18 @@ Version: 1.0
             input.value = currentQuantity + 1;
         }
     });
-
-
 })(window.jQuery);
+
+// Add this to handle menu item active states
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active class to clicked link
+            this.classList.add('active');
+        });
+    });
+});
