@@ -17,9 +17,9 @@ if (empty($phone)) {
 }
 
 // Format message for Telegram
-$message = "🔔 New call request!\n";
+$message = "🔔 Новый запрос на звонок!\n";
 $message .= "📱 Phone: {$phone}\n";
-$message .= "🕐 Time: " . date('Y-m-d H:i:s') . "\n";
+$message .= "🕐 Time: " .  date('H:i:s d-m-Y ') . "\n";
 $message .= "🌐 Site: " . $_SERVER['HTTP_HOST'];
 
 // Send to Telegram

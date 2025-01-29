@@ -34,7 +34,8 @@ $telegramMessage = "💌 Новое сообщение с сайта!\n\n";
 $telegramMessage .= "👤 Имя: {$name}\n";
 $telegramMessage .= "📞 Контакт: {$contact}\n";
 $telegramMessage .= "💬 Сообщение: {$message}\n";
-$telegramMessage .= "🕐 Время: " . date('Y-m-d H:i:s');
+$telegramMessage .= "🕐 Время: " . date('H:i:s d-m-Y ');
+$telegramMessage .= "🌐 Site: " . $_SERVER['HTTP_HOST'];
 
 // Send to Telegram
 $telegramUrl = "https://api.telegram.org/bot" . TELEGRAM_BOT_TOKEN . "/sendMessage";
