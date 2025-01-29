@@ -345,41 +345,58 @@ a:hover {
 	color: #fff;
 	opacity: .6;
 }
+
 .page-spinner {
 	display: inline-block;
 	width: 2.75rem;
 	height: 2.75rem;
 	margin-bottom: .75rem;
 	vertical-align: text-bottom;
-	background-color: #d7dde2; 
+	background: linear-gradient(45deg, #1363c6, #dc3545);
+	/* Blue to Red gradient */
 	border-radius: 50%;
 	opacity: 0;
-	-webkit-animation: spinner .75s linear infinite;
-	animation: spinner .75s linear infinite;
+	-webkit-animation: spinner .75s linear infinite, colorPulse 2s ease-in-out infinite;
+	animation: spinner .75s linear infinite, colorPulse 2s ease-in-out infinite;
 }
-[data-bs-theme="dark"] .page-spinner {
-	background-color: rgba(255,255,255,.25);
-}
+
 @-webkit-keyframes spinner {
 	0% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
+		-webkit-transform: scale(0) rotate(0deg);
+		transform: scale(0) rotate(0deg);
 	}
+
 	50% {
 		opacity: 1;
 		-webkit-transform: none;
 		transform: none;
 	}
 }
+
 @keyframes spinner {
 	0% {
-		-webkit-transform: scale(0);
-		transform: scale(0);
+		-webkit-transform: scale(0) rotate(0deg);
+		transform: scale(0) rotate(0deg);
 	}
+
 	50% {
 		opacity: 1;
 		-webkit-transform: none;
 		transform: none;
+	}
+}
+
+@keyframes colorPulse {
+	0% {
+		background: linear-gradient(45deg, #1363c6, #dc3545);
+	}
+
+	50% {
+		background: linear-gradient(225deg, #dc3545, #1363c6);
+	}
+
+	100% {
+		background: linear-gradient(45deg, #1363c6, #dc3545);
 	}
 }
 
