@@ -37,7 +37,9 @@
                     <a class="stretched-link" href="/"></a>
                 </div>
 
-                <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar"><i class="ri-menu-3-line ri-lg"></i></button>
+                <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar"><i class="ri-menu-3-line ri-lg"></i>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto gap-4">
                         <!-- <li class="nav-item">
@@ -71,7 +73,7 @@
 
                                 <div class="d-flex align-items-center gap-3 mt-5">
                                     <a href="#about" class="btn btn-light btn-lg">Подробнее</a>
-                                    <a href="#services" class="btn btn-outline-light btn-lg">Посмотреть услуги</a>
+                                    <a href="#services" class="btn btn-outline-light btn-lg">Услуги</a>
                                 </div>
                             </div>
                         </div>
@@ -673,16 +675,30 @@
             <div class="offcanvas-body">
                 <div class="sidebar-nav">
                     <ul class="navbar-nav mb-3">
-                        <li class="nav-item"><a class="nav-link py-4" href="#page-top">Главная</a></li>
-                        <li class="nav-item"><a class="nav-link py-4" href="#about">О нас</a></li>
-                        <li class="nav-item"><a class="nav-link py-4" href="#services">Услуги</a></li>
-                        <li class="nav-item"><a class="nav-link py-4" href="#portfolio">Портфолио</a></li>
-                        <li class="nav-item"><a class="nav-link py-4" href="#team">Команда</a></li>
-                        <li class="nav-item"><a class="nav-link py-4" href="#contact">Контакты</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#page-top" onclick="closeOffcanvas()">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#about" onclick="closeOffcanvas()">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#services" onclick="closeOffcanvas()">Услуги</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#portfolio" onclick="closeOffcanvas()">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#team" onclick="closeOffcanvas()">Команда</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link py-4" href="#contact" onclick="closeOffcanvas()">Контакты</a>
+                        </li>
                     </ul>
-                    <a href="#" class="btn btn-primary w-100 btn-lg mt-3" data-bs-dismiss="offcanvas" aria-label="Close">Закрыть</a>
                 </div>
             </div>
+
+
+
         </div>
 
         <!-- Call Me Modal -->
@@ -719,8 +735,17 @@
             </div>
         </div>
 
+        <script>
+            function closeOffcanvas() {
+                const offcanvas = document.getElementById('sidebar');
+                const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+                bsOffcanvas.hide();
+            }
+        </script>
+
         <!-- Bootsrap Bundle Js -->
-        <script data-cfasync="false" src="./vender/cloudflare-static/email-decode.min.js"></script><script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script data-cfasync="false" src="./vender/cloudflare-static/email-decode.min.js"></script>
+        <script src="vender/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!-- Jquery Js -->
         <script src="vender/jquery/jquery-3.6.4.min.js"></script>
         <!-- AOS Js -->
